@@ -22,3 +22,6 @@ PRODUCT_NAME := bliss_android_x86
 PRODUCT_BRAND := Android-x86
 PRODUCT_DEVICE := x86
 PRODUCT_MODEL := Generic Android-x86
+
+PRODUCT_BUILD_PROP_OVERRIDES += \
+    PRODUCT_NAME=android_x86 \
