@@ -13,9 +13,21 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 #
+# Inherit Bliss vendor
+$(call inherit-product, vendor/bliss/config/common.mk)
+
+# Inherit device configuration
+$(call inherit-product, $(LOCAL_PATH)/android_x86.mk)
+
+# includes the base of Android-x86 platform
+$(call inherit-product,device/generic/common/x86.mk)
+
+# Device identifier. This must come after all inclusions
+PRODUCT_NAME := bliss_android_x86
+PRODUCT_BRAND := Android-x86
+PRODUCT_DEVICE := x86
+PRODUCT_MODEL := Generic Android-x86
 
 # Release name
 PRODUCT_RELEASE_NAME := android_x86
 
-# Inherit device configuration
-$(call inherit-product, $(LOCAL_PATH)/android_x86.mk)
